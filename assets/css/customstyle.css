@@ -1,0 +1,29 @@
+.heading1
+{
+	background-color: #4682b4;
+	color: white;
+	margin-top: 50px;
+	position: relative;
+	font-size: 18px;
+	padding: 10px;
+	font-family: Arial;
+	
+}
+
+.itemtable
+{
+	margin-top: 25px;
+}
+
+.itemimage
+{
+margin-left: 1000px;
+
+}
+
+.itemname
+{
+position: relative;
+margin-left: -100px;
+
+}
