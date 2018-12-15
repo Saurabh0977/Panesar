@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 15, 2018 at 04:22 PM
+-- Generation Time: Dec 15, 2018 at 04:40 PM
 -- Server version: 5.6.35
 -- PHP Version: 5.6.31
 
@@ -38,16 +38,6 @@ CREATE TABLE `item_list` (
   `CREATED_BY` int(10) NOT NULL,
   `CREATED_AT` timestamp(5) NOT NULL DEFAULT CURRENT_TIMESTAMP(5)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `item_list`
---
-
-INSERT INTO `item_list` (`ID`, `NAME`, `UNIT`, `PHOTO`, `COLOR`, `MIN_THRESHOLD`, `CURRENT_QTY`, `STATUS`, `CREATED_BY`, `CREATED_AT`) VALUES
-(1, 'askdoakd', '1', '', '', 223, 0, 1, 1, '2018-07-22 18:44:50.45802'),
-(2, 'pen', '3', '', 'red', 10, 0, 1, 1, '2018-08-03 06:51:10.84235'),
-(3, 'macbook', '3', '8492092fb5e2b82fc526b5b0d5a9c308.png', 'black', 23, 0, 1, 1, '2018-08-03 06:52:32.74183'),
-(4, 'racket', '3', '', 'green', 2, 0, 1, 2, '2018-12-15 13:23:06.48361');
 
 -- --------------------------------------------------------
 
@@ -97,13 +87,6 @@ CREATE TABLE `samples` (
   `CREATED_AT` timestamp(5) NOT NULL DEFAULT CURRENT_TIMESTAMP(5) ON UPDATE CURRENT_TIMESTAMP(5)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `samples`
---
-
-INSERT INTO `samples` (`ID`, `NAME`, `STATUS`, `CREATED_BY`, `CREATED_AT`) VALUES
-(1, 'machine', 1, 1, '2018-08-03 06:52:58.04165');
-
 -- --------------------------------------------------------
 
 --
@@ -118,14 +101,6 @@ CREATE TABLE `sample_list` (
   `CREATED_AT` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `CREATED_BY` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `sample_list`
---
-
-INSERT INTO `sample_list` (`SAMPLE_ID`, `ITEM_ID`, `STATUS`, `QUANTITY`, `CREATED_AT`, `CREATED_BY`) VALUES
-(1, 3, 1, '2', '2018-08-03 06:52:58', 1),
-(1, 2, 1, '2', '2018-08-03 06:52:58', 1);
 
 -- --------------------------------------------------------
 
@@ -203,7 +178,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `NAME`, `USERNAME`, `PASSWORD`, `PHONE_NUMBER`, `EMAIL_ID`, `SALT`, `TYPE`, `CREATED_BY`, `CREATED_AT`, `STATUS`, `DELETED_BY`, `DELETED_AT`) VALUES
-(2, 'admin', 'admin', 'ecac031067aa4b50b390378bbf3f0c8da8fe121a6cf97dee9c1617e9913078c0', '', '', 'c5eea9669ee710fa', 1, 1, '2018-12-15 12:44:26', 1, NULL, NULL);
+(1, 'admin', 'admin', 'c3c79ea4b89a8340210cd03121ccb227bd4a078f2c3468bdc1afd65c4156d248', '', '', 'df04b3bf2f0c58a8', 1, 0, '2018-12-15 15:35:48', 1, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -259,7 +234,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `item_list`
 --
 ALTER TABLE `item_list`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `lot_list`
 --
@@ -274,7 +249,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `samples`
 --
 ALTER TABLE `samples`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `stock`
 --
@@ -289,7 +264,7 @@ ALTER TABLE `stock_item`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
