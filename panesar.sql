@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 15, 2018 at 01:49 PM
+-- Generation Time: Dec 15, 2018 at 04:22 PM
 -- Server version: 5.6.35
 -- PHP Version: 5.6.31
 
@@ -46,7 +46,8 @@ CREATE TABLE `item_list` (
 INSERT INTO `item_list` (`ID`, `NAME`, `UNIT`, `PHOTO`, `COLOR`, `MIN_THRESHOLD`, `CURRENT_QTY`, `STATUS`, `CREATED_BY`, `CREATED_AT`) VALUES
 (1, 'askdoakd', '1', '', '', 223, 0, 1, 1, '2018-07-22 18:44:50.45802'),
 (2, 'pen', '3', '', 'red', 10, 0, 1, 1, '2018-08-03 06:51:10.84235'),
-(3, 'macbook', '3', '', 'silver', 23, 0, 1, 1, '2018-08-03 06:52:32.74183');
+(3, 'macbook', '3', '8492092fb5e2b82fc526b5b0d5a9c308.png', 'black', 23, 0, 1, 1, '2018-08-03 06:52:32.74183'),
+(4, 'racket', '3', '', 'green', 2, 0, 1, 2, '2018-12-15 13:23:06.48361');
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,6 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `NAME`, `USERNAME`, `PASSWORD`, `PHONE_NUMBER`, `EMAIL_ID`, `SALT`, `TYPE`, `CREATED_BY`, `CREATED_AT`, `STATUS`, `DELETED_BY`, `DELETED_AT`) VALUES
-(1, 'Gagandeep Singh', 'gagandeep', 'a2c5c49c75eb08b142ea90a8cba07725d7c6c4d534214e5c6cbb6233b3413cbf', '', '', '279df27e93000e7b', 1, 0, '2018-07-12 07:37:28', 0, NULL, NULL),
 (2, 'admin', 'admin', 'ecac031067aa4b50b390378bbf3f0c8da8fe121a6cf97dee9c1617e9913078c0', '', '', 'c5eea9669ee710fa', 1, 1, '2018-12-15 12:44:26', 1, NULL, NULL);
 
 --
@@ -259,7 +259,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `item_list`
 --
 ALTER TABLE `item_list`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `lot_list`
 --
